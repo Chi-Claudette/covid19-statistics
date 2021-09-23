@@ -13,6 +13,7 @@ import { CreateCatComponent } from './create-cat/create-cat.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { EditProductComponent } from './manage-product/edit-product/edit-product.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EditProductComponent } from './manage-product/edit-product/edit-product
     CreateCatComponent,
     CreateProductComponent,
     ManageProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
