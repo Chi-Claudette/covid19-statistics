@@ -14,6 +14,7 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { ManageProductComponent } from './manage-product/manage-product.component';
 import { EditProductComponent } from './manage-product/edit-product/edit-product.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeaderComponent } from './header/header.component';
     CreateProductComponent,
     ManageProductComponent,
     EditProductComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

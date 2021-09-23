@@ -7,15 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   date= new Date();
-  show= false;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-  onClick()
-  {
-    this.show=true;
   }
 
 }
