@@ -1,49 +1,75 @@
-<div class="container">
+<app-header></app-header>
+<div class="container offset-md-1">
   <div class="row">
-    <div class="col-md-6 col-offset-3">
-      <div class="im">
-        <img>
+    <div class="col-md-5 im" [ngStyle]="{backgroundImage:'url(assets/pro.jpg)'}">
+      <div style="text-align: center; margin-top: 30px">
+        <h4>Create product</h4>
+        <span class="form-text">Fill the form to create a product</span>
       </div>
     </div>
-    <div class="col-md-6 col-offset-3">
-      <form>
+
+    <div class="col-md-6 form" >
+      <div class="container">
+      <form  [formGroup]="createP" (submit)="onSubmit(createP.value)">
+        <br>
         <div class="form-group">
           <label>Name</label>
-          <input type="text" id="name" class="form-control" formArrayName="name">
+          <input type="text" id="name" class="form-control" formControlName="name">
+          <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
         </div>
-        <br>
         <div class="form-group">
           <label>Quantity</label>
-          <input type="text" id="quant" class="form-control" formArrayName="quant">
+          <input type="number" id="quant" class="form-control" formControlName="quant">
+          <span *ngIf="f.quant.invalid && f.quant.touched" class="form-text"> This field is required</span>
         </div>
-        <br>
+
         <div class="form-group">
-          <label>Unit Price</label>
-          <input type="text" id="uprice" class="form-control" formArrayName="uprice">
+          <label>Unit price</label>
+          <input type="text" id="uprice" class="form-control" formControlName="uprice">
+          <span *ngIf="f.uprice.invalid && f.uprice.touched" class="form-text"> This field is required</span>
         </div>
-        <br>
         <div class="form-group">
           <label>Currency</label>
-          <input type="text" id="cur" class="form-control" formArrayName="cur">
+          <input type="text" id="cur" class="form-control" formControlName="cur">
+          <span *ngIf="f.cur.invalid && f.cur.touched" class="form-text"> This field is required</span>
         </div>
-        <br>
         <div class="form-group">
-          <label>Select a category</label>
-          <select class="form-control" formArrayName="cat">
-            <option value="elec">Electronics</option>
-            <option value="jew">Jewelries</option>
-            <option value="fc">Fashion clothes</option>
-          </select>
-
+          <label>Product description</label>
+          <input type="text" id="des" class="form-control" formControlName="des">
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <span>Select a category</span>
+              <select class="form-control form-select" formControlName="cat">
+                <option value="elec">Electronics</option>
+                <option value="jew">Jewelries</option>
+                <option value="fc">Fashion clothes</option>
+              </select>
+              <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Product image</label>
+              <input type="file" id="pi" class="form-control" formControlName="pi">
+              <span *ngIf="f.pi.invalid && f.pi.touched" class="form-text"> This field is required</span>
+            </div>
+          </div>
+        </div>
+
         <br>
-        <div class>
-          <button type="submit" class="btn btn-warning btn-lg">Create product</button>&nbsp; &nbsp;
-          <button type="submit" class="btn btn-danger btn-lg">Cancel</button>
+        <div>
+          <button type="submit" [disabled]="createP.invalid" class="btn btn-warning btn-lg color">Create product</button>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger btn-lg" routerLink="/db">Cancel</button>
 
         </div>
 
       </form>
+      </div>
+      <br>
     </div>
   </div>
-</div>
+  </div>
+
