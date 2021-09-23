@@ -1,1 +1,49 @@
-<p>create-product works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-offset-3">
+      <div class="im">
+        <img>
+      </div>
+    </div>
+    <div class="col-md-6 col-offset-3">
+      <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="name" class="form-control" formArrayName="name">
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="text" id="quant" class="form-control" formArrayName="quant">
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Unit Price</label>
+          <input type="text" id="uprice" class="form-control" formArrayName="uprice">
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Currency</label>
+          <input type="text" id="cur" class="form-control" formArrayName="cur">
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Select a category</label>
+          <select class="form-control" formArrayName="cat">
+            <option value="elec">Electronics</option>
+            <option value="jew">Jewelries</option>
+            <option value="fc">Fashion clothes</option>
+          </select>
+
+        </div>
+        <br>
+        <div class>
+          <button type="submit" class="btn btn-warning btn-lg">Create product</button>&nbsp; &nbsp;
+          <button type="submit" class="btn btn-danger btn-lg">Cancel</button>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

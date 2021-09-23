@@ -15,6 +15,7 @@ import { ManageProductComponent } from './manage-product/manage-product.componen
 import { EditProductComponent } from './manage-product/edit-product/edit-product.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,10 +33,11 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
