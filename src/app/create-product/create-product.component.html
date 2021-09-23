@@ -13,7 +13,7 @@
       <form  [formGroup]="createP" (submit)="onSubmit(createP.value)">
         <br>
         <div class="form-group">
-          <label>Name</label>
+          <label>Product name</label>
           <input type="text" id="name" class="form-control" formControlName="name">
           <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
         </div>
@@ -42,7 +42,6 @@
             <div class="form-group">
               <span>Select a category</span>
               <select class="form-control form-select" formControlName="cat">
-                <option value="elec">Electronics</option>
                 <option value="jew">Jewelries</option>
                 <option value="fc">Fashion clothes</option>
               </select>

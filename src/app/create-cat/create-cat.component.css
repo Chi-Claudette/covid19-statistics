@@ -1,0 +1,33 @@
+button
+{
+  box-shadow: 1px 1px 2px black;
+}
+.jumbotron
+{
+  background-color: rgba(10,80,1,0.3);
+  color: white;
+}
+
+.im{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.row .col-md-5
+{
+  box-shadow: 1px 2px 3px 1px gray;
+}
+.row  .form
+{
+  box-shadow: 1px 2px 3px 1px gray;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+.color{
+  background-color: coral;
+  color: white;
+}
