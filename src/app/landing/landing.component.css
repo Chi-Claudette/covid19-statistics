@@ -1,0 +1,25 @@
+/*.carousel .carousel-item {*/
+/*  height: 400px;*/
+/*}*/
+
+/*.carousel-item img {*/
+/*  position: absolute;*/
+/*  object-fit:cover;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  min-height: 400px;*/
+/*}*/
+.carousel-item{
+  height: 500px;
+}
+.carousel-item img{
+  height: 500px;
+}
+.carousel-control-prev-icon
+{
+  background-color: blue;
+}
+.carousel-control-next-icon
+{
+  background-color: blue;
+}
