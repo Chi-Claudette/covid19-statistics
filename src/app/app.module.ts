@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
+import { LandingHeaderComponent } from './landing-header/landing-header.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {FormsModule} from "@angular/forms";
     ManageProductComponent,
     EditProductComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LandingHeaderComponent
   ],
     imports: [
         BrowserModule,
