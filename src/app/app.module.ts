@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
 import { LandingHeaderComponent } from './landing-header/landing-header.component';
+import { PdetailComponent } from './manage-product/product-detail/pdetail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LandingHeaderComponent } from './landing-header/landing-header.componen
     EditProductComponent,
     HeaderComponent,
     FooterComponent,
-    LandingHeaderComponent
+    LandingHeaderComponent,
+    PdetailComponent
   ],
     imports: [
         BrowserModule,
