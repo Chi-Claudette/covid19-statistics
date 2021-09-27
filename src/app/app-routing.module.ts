@@ -17,7 +17,8 @@ const routes: Routes = [
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'cp', component: CreateProductComponent},
   {path: 'mp', component: ManageProductComponent},
-  {path: 'mp/:id', component: PdetailComponent},
+  {path: 'mp/pd/:id', component: PdetailComponent},
+  {path: 'mp/ep/:id', component: EditProductComponent},
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'mc/:id', component: EditCatComponent},
 ];
