@@ -23,6 +23,7 @@ import {FormsModule} from "@angular/forms";
 import { LandingHeaderComponent } from './landing-header/landing-header.component';
 import { PdetailComponent } from './manage-product/product-detail/pdetail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     FooterComponent,
     LandingHeaderComponent,
-    PdetailComponent
+    PdetailComponent,
+    PageNotFoundComponent
   ],
     imports: [
         BrowserModule,

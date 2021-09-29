@@ -9,6 +9,7 @@ import {ManageProductComponent} from "./manage-product/manage-product.component"
 import {EditProductComponent} from "./manage-product/edit-product/edit-product.component";
 import {PdetailComponent} from "./manage-product/product-detail/pdetail.component";
 import {EditCatComponent} from "./manage-category/edit-cat/edit-cat.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -21,6 +22,8 @@ const routes: Routes = [
   {path: 'mp/ep/:id', component: EditProductComponent},
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'mc/:id', component: EditCatComponent},
+  {path: 'not-found', component: PageNotFoundComponent},
+  {path: '**', redirectTo: 'not-found'},
 ];
 
 @NgModule({
