@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +22,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
 import { LandingHeaderComponent } from './landing-header/landing-header.component';
 import { PdetailComponent } from './manage-product/product-detail/pdetail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,10 @@ import { PdetailComponent } from './manage-product/product-detail/pdetail.compon
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-      FormsModule
+      FormsModule,
+      NgbModule,
+      CarouselModule,
+      BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
