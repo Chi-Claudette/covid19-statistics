@@ -1,1 +1,50 @@
-<p>edit-cat works!</p>
+<app-header></app-header>
+<br>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h4 style="color:coral; text-align: center "> Edit Category</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="assets/img/com.jfif" width="500px" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <div class="container">
+
+            <form  [formGroup]="editC" (submit)="onSubmit(editC.value)">
+              <br>
+              <div class="form-group">
+                <label>Category name</label>
+                <input type="text" id="name" class="form-control" formControlName="name">
+                <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Image</label>
+                <input type="file" id="im" class="form-control" formControlName="im">
+                <span *ngIf="f.im.invalid && f.im.touched" class="form-text"> This field is required</span>
+              </div>
+              <br>
+              <br>
+              <div>
+                <button type="submit" [disabled]="editC.invalid" class="btn btn-primary btn-lg color">Edit category</button>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger btn-lg" style="background-color: crimson" routerLink="/db">Cancel</button>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
