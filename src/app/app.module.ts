@@ -24,6 +24,7 @@ import { LandingHeaderComponent } from './landing-header/landing-header.componen
 import { PdetailComponent } from './manage-product/product-detail/pdetail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PageNotFoundComponent
   ],
     imports: [
+      HttpClientModule,
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,

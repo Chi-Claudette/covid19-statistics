@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ProductService} from "../shared/product.service";
+import {Prod} from "../shared/prod";
 
 @Component({
   selector: 'app-create-product',
@@ -8,8 +10,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class CreateProductComponent implements OnInit {
   createP= new FormGroup({});
+  products: any[] = [];
 
-  constructor() { }
+  constructor(private  getProducts: ProductService) { }
 
   ngOnInit(): void {
     this.createP= new FormGroup(
@@ -23,16 +26,23 @@ export class CreateProductComponent implements OnInit {
         des: new FormControl(null),
 
       }
-    )
+    );
+
+    this.getProducts.getProducts().subscribe(res => {
+      this.products = res;
+      console.log(res);
+    });
   }
   get f()
   {
     return this.createP.controls;
   }
 
-  onSubmit(form:any)
+  onSubmit(form: Prod)
   {
-
+      this.getProducts.postProducts(form).subscribe(res => {
+        console.log((res));
+      })
   }
 
 
