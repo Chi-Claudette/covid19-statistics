@@ -1,5 +1,6 @@
 export interface Cat {
+  id: number,
   name: string,
-  img: string
+  im: string
 
 }

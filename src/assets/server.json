@@ -1,0 +1,58 @@
+{
+  "products": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "cat1",
+      "im": "assets/img/gwn.png"
+    },
+    {
+      "name": "cat2",
+      "im": "assets/img/cake.jfif",
+      "id": 2
+    },
+    {
+      "name": "cat 3",
+      "im": "assets/img/brd.jfif",
+      "id": 3
+    },
+    {
+      "name": "cat 4",
+      "im": "assets/img/org.jfif",
+      "id": 4
+    },
+    {
+      "name": "cat 5",
+      "im": "assets/img/ct.jpg",
+      "id": 5
+    },
+    {
+      "name": "cat 6",
+      "im": "assets/img/com.jfif",
+      "id": 6
+    },
+    {
+      "name": "cat 7",
+      "im": "assets/img/pro.jfif",
+      "id": 7
+    },
+    {
+      "name": "cat 8",
+      "im": "assets/img/bg6.jpg",
+      "id": 8
+    },
+    {
+      "name": "cat 9",
+      "im": "assets/img/bg4.jpg",
+      "id": 9
+    },
+    {
+      "name": "cat 10",
+      "im": "assets/img/ci.jpg",
+      "id": 10
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

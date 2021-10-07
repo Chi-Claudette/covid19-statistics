@@ -41,9 +41,8 @@
           <div class="col-md-6">
             <div class="form-group">
               <span>Select a category</span>
-              <select class="form-control form-select" formControlName="cat">
-                <option value="jew">Jewelries</option>
-                <option value="fc">Fashion clothes</option>
+              <select class="form-control form-select" formControlName="cat" >
+                <option *ngFor="let cat of cats" value="{{cat.id}}">{{cat.name}}</option>
               </select>
               <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
 
@@ -74,8 +73,3 @@
 <br>
 <br>
 
-<div class="container" *ngFor = "let product of products">
-  <p>
-    {{ product.id }} : {{ product.title }} : {{ product.price }}
-  </p>
-</div>

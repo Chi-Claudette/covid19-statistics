@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {CategoryService} from "../shared/category.service";
 
 @Component({
   selector: 'app-create-cat',
@@ -7,9 +8,10 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./create-cat.component.css']
 })
 export class CreateCatComponent implements OnInit {
+  cats: any[]= [];
   createC= new FormGroup({});
 
-  constructor() { }
+  constructor(private cs: CategoryService) { }
 
   ngOnInit(): void {
     this.createC= new FormGroup(
@@ -19,7 +21,7 @@ export class CreateCatComponent implements OnInit {
 
 
       }
-    )
+    );
   }
   get f()
   {
@@ -27,7 +29,10 @@ export class CreateCatComponent implements OnInit {
   }
   onSubmit(form:any)
   {
-
+    this.cs.createCat(form).subscribe(res =>
+    {
+      console.log(res);
+    })
   }
 
 }

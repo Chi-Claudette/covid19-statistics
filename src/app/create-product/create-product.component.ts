@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProductService} from "../shared/product.service";
 import {Prod} from "../shared/prod";
+import {CategoryService} from "../shared/category.service";
 
 @Component({
   selector: 'app-create-product',
@@ -10,9 +11,9 @@ import {Prod} from "../shared/prod";
 })
 export class CreateProductComponent implements OnInit {
   createP= new FormGroup({});
-  products: any[] = [];
+  cats: any[] = [];
 
-  constructor(private  getProducts: ProductService) { }
+  constructor(private  ps: ProductService, private  cs: CategoryService) { }
 
   ngOnInit(): void {
     this.createP= new FormGroup(
@@ -28,8 +29,8 @@ export class CreateProductComponent implements OnInit {
       }
     );
 
-    this.getProducts.getProducts().subscribe(res => {
-      this.products = res;
+    this.cs.getCat().subscribe(res => {
+      this.cats = res;
       console.log(res);
     });
   }
@@ -40,7 +41,7 @@ export class CreateProductComponent implements OnInit {
 
   onSubmit(form: Prod)
   {
-      this.getProducts.postProducts(form).subscribe(res => {
+      this.ps.postProducts(form).subscribe(res => {
         console.log((res));
       })
   }

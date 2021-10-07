@@ -1,10 +1,12 @@
 import {Cat} from "./cat";
 
 export interface Prod {
+  id: number,
   name: string,
   quant: number,
-  price: string,
-  curr: string,
-  pd?: string,
-  cat: Cat
+  uprice: string,
+  cur: string,
+  cat: Cat,
+  pi: string,
+  des: string
 }

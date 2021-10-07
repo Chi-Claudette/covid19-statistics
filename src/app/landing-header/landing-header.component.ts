@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from "../shared/product.service";
 
 @Component({
   selector: 'app-landing-header',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-header.component.css']
 })
 export class LandingHeaderComponent implements OnInit {
+  resultH = "";
 
-  constructor() { }
+  constructor(private ps:ProductService) { }
 
   ngOnInit(): void {
+  }
+  onSubmit()
+  {
+    this.ps.eventEmitter.emit(this.resultH);
   }
 
 }

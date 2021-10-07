@@ -10,7 +10,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-4">
-          <img src="assets/img/com.jfif" width="500px" class="img-fluid">
+          <img src="{{categ.im}}" width="500px" class="img-fluid">
         </div>
         <div class="col-md-8">
           <div class="container">
@@ -19,7 +19,7 @@
               <br>
               <div class="form-group">
                 <label>Category name</label>
-                <input type="text" id="name" class="form-control" formControlName="name">
+                <input type="text" id="name" class="form-control" formControlName="name" value="{{categ.name}}">
                 <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
               </div>
               <br>

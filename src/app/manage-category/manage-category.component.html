@@ -10,37 +10,13 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Electronics</td>
+    <tr *ngFor="let cat of cats">
+      <td>{{cat.name}}</td>
       <td>&nbsp;
-        <button class="btn btn-primary"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
-        <button class="btn btn-danger"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
+        <button type="button" class="btn btn-primary" (click)="edit(cat.id)"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
+        <button type="button" class="btn btn-danger" (click)="delete(cat.id)"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
       </td>
     </tr>
-    <tr>
-      <td>School Accessories</td>
-      <td>&nbsp;
-        <button class="btn btn-primary"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
-        <button class="btn btn-danger"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Shoes</td>
-      <td>&nbsp;
-        <button class="btn btn-primary"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
-        <button class="btn btn-danger"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
-      </td>
-    </tr>
-    <tr>
-      <td>Fashion</td>
-      <td>&nbsp;
-        <button class="btn btn-primary"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
-        <button class="btn btn-danger"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
-      </td>
-    </tr>
-
-
-
 
     </tbody>
   </table>
