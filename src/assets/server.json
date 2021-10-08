@@ -1,14 +1,115 @@
 {
-  "products": [],
-  "categories": [
+  "products": [
     {
-      "id": 1,
-      "name": "cat1",
-      "im": "assets/img/gwn.png"
+      "name": "orange",
+      "quant": 8,
+      "uprice": "200",
+      "cur": "frs",
+      "cat": "1",
+      "pi": "assets/img/org.jfif",
+      "des": "juicy fruit",
+      "id": 1
     },
     {
-      "name": "cat2",
-      "im": "assets/img/cake.jfif",
+      "name": "cake",
+      "quant": 3,
+      "uprice": "5000",
+      "cur": "frs",
+      "cat": "1",
+      "pi": "assets/img/cake.jfif",
+      "des": "delicious cake",
+      "id": 2
+    },
+    {
+      "name": "Tomato",
+      "quant": 7,
+      "uprice": "100",
+      "cur": "frs",
+      "cat": "2",
+      "pi": "assets/img/tomat.jfif",
+      "des": "healthy and ripped tomatoes",
+      "id": 3
+    },
+    {
+      "name": "Carrots",
+      "quant": 3,
+      "uprice": "200",
+      "cur": "frs",
+      "cat": "2",
+      "pi": "assets/img/car.jfif",
+      "des": "healthy carrots from the best ",
+      "id": 4
+    },
+    {
+      "name": "Party gown",
+      "quant": 6,
+      "uprice": "7000",
+      "cur": "frs",
+      "cat": "3",
+      "pi": "assets/img/gn.jfif",
+      "des": "nice party wear",
+      "id": 5
+    },
+    {
+      "name": "designer dress",
+      "quant": 2,
+      "uprice": "10000",
+      "cur": "frs",
+      "cat": "3",
+      "pi": "assets/img/ct1.jfif",
+      "des": "nice and comfort",
+      "id": 6
+    },
+    {
+      "name": "Smart phone",
+      "quant": 15,
+      "uprice": "80000",
+      "cur": "frs",
+      "cat": "4",
+      "pi": "assets/img/ph.jfif",
+      "des": "smart phone from the best ",
+      "id": 7
+    },
+    {
+      "name": "Speaker",
+      "quant": 4,
+      "uprice": "6000",
+      "cur": "frs",
+      "cat": "4",
+      "pi": "assets/img/spk.jfif",
+      "des": "powerful speaker",
+      "id": 8
+    },
+    {
+      "name": "Pineapple",
+      "quant": 6,
+      "uprice": "500",
+      "cur": "frs",
+      "cat": "5",
+      "pi": "assets/img/pine.jfif",
+      "des": "succulent fruit",
+      "id": 9
+    },
+    {
+      "name": "Cheese",
+      "quant": 3,
+      "uprice": "1500",
+      "cur": "frs",
+      "cat": "5",
+      "pi": "assets/img/ch.jfif",
+      "des": "delicious cheese",
+      "id": 10
+    }
+  ],
+  "categories": [
+    {
+      "name": "category1",
+      "im": "assets/img/jwr.jpg",
+      "id": 1
+    },
+    {
+      "name": "ca2",
+      "im": "assets/img/org.jfif",
       "id": 2
     },
     {
@@ -45,11 +146,6 @@
       "name": "cat 9",
       "im": "assets/img/bg4.jpg",
       "id": 9
-    },
-    {
-      "name": "cat 10",
-      "im": "assets/img/ci.jpg",
-      "id": 10
     }
   ],
   "profile": {

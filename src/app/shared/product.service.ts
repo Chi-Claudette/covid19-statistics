@@ -14,7 +14,7 @@ export class ProductService {
     return this.http.get<any>(this.url);
   }
 
-  postProducts(postData: Prod) {
+  postProducts(catid: number, postData: Prod) {
     return this.http.post<any>(this.url, postData);
   }
 

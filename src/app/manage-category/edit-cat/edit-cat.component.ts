@@ -17,6 +17,7 @@ export class EditCatComponent implements OnInit {
   constructor(private cs: CategoryService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.categ.name);
     this.editC= new FormGroup(
       {
         name: new FormControl(null, Validators.required),
@@ -27,16 +28,16 @@ export class EditCatComponent implements OnInit {
     this.cs.getACat(this.id).subscribe(res =>
     {
       this.categ= res;
-      console.log(this.categ);
+      console.log(this.categ.name);
     })
   }
   get f()
   {
     return this.editC.controls;
   }
-  onSubmit(form:Cat)
+  onSubmit(id:number, form:Cat)
   {
-    this.cs.editCat(form).subscribe(res =>
+    this.cs.editCat(id, form).subscribe(res =>
     {
       console.log(res);
     })

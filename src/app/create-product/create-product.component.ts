@@ -39,9 +39,9 @@ export class CreateProductComponent implements OnInit {
     return this.createP.controls;
   }
 
-  onSubmit(form: Prod)
+  onSubmit(id:number,form: Prod)
   {
-      this.ps.postProducts(form).subscribe(res => {
+      this.ps.postProducts(id, form).subscribe(res => {
         console.log((res));
       })
   }

@@ -21,9 +21,9 @@ export class CategoryService {
   {
     return this.http.get<any>(this.url+'/'+catid);
   }
-  editCat(cat:Cat)
+  editCat(catid:number, cat:Cat)
   {
-    return this.http.put<any>(this.url+'/'+cat.id, cat);
+    return this.http.put<any>(this.url+'/'+catid, cat);
   }
   deleteCat(catid: number)
   {

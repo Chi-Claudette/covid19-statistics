@@ -1,25 +1,23 @@
-<app-header></app-header>
+<app-header xmlns="http://www.w3.org/1999/html"></app-header>
+<a routerLink="/db"><img src="assets/img/su.png" width="50px" height="50px"></a>
 <div class="container">
   <h3>Manage your categories</h3>
-  <br>
-  <table class="table table-hover  table-bordered border-success">
-    <thead>
-    <tr>
-      <th scope="col">Category name</th>
-      <th scope="col" >Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let cat of cats">
-      <td>{{cat.name}}</td>
-      <td>&nbsp;
+  <div class="row">
+  <div class="col-md-3 col-sm-6" *ngFor="let cat of cats">
+  <div class="card" style="width: 18rem;">
+    <img [src]="cat.im" class="card-img-top img-thumbnail im" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{cat.name}}</h5>
+      <div  style="text-align: center">
+        <br>
         <button type="button" class="btn btn-primary" (click)="edit(cat.id)"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
         <button type="button" class="btn btn-danger" (click)="delete(cat.id)"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
-      </td>
-    </tr>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
 
-    </tbody>
-  </table>
 </div>
 
 
