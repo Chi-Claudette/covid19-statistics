@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'cp', component: CreateProductComponent},
   {path: 'mp', component: ManageProductComponent},
   {path: 'mp/pd/:id', component: PdetailComponent},
-  {path: 'mp/ep/:id', component: EditProductComponent},
+  {path: 'mp/:id', component: EditProductComponent},
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'mc/:id', component: EditCatComponent},
   {path: 'not-found', component: PageNotFoundComponent},

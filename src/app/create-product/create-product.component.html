@@ -1,5 +1,5 @@
 <app-header></app-header>
-<a routerLink="/db"><img src="assets/img/su.png" width="50px" height="50px"></a>
+<a routerLink="/db"><img src="assets/img/arrow.png" width="30px" height="30px"></a>
 <div class="container offset-md-1">
   <div class="row">
     <div class="col-md-5 im" [ngStyle]="{backgroundImage:'url(assets/img/pro.jpg)'}">
@@ -11,7 +11,7 @@
 
     <div class="col-md-6 form" >
       <div class="container">
-      <form  [formGroup]="createP" (submit)="onSubmit(createP.value.cat, createP.value)">
+      <form  [formGroup]="createP" (submit)="onSubmit( createP.value)">
         <br>
         <div class="form-group">
           <label>Product name</label>
@@ -26,7 +26,7 @@
 
         <div class="form-group">
           <label>Unit price</label>
-          <input type="text" id="uprice" class="form-control" formControlName="uprice">
+          <input type="number" id="uprice" class="form-control" formControlName="uprice">
           <span *ngIf="f.uprice.invalid && f.uprice.touched" class="form-text"> This field is required</span>
         </div>
         <div class="form-group">
@@ -42,8 +42,8 @@
           <div class="col-md-6">
             <div class="form-group">
               <span>Select a category</span>
-              <select class="form-control form-select" formControlName="cat" >
-                <option *ngFor="let cat of cats" value="{{cat.id}}">{{cat.name}}</option>
+              <select class="form-control form-select" formControlName="cat" [(ngModel)]="prod">
+                <option *ngFor="let cat of cats" value="{{cat.name}}">{{cat.name}}</option>
               </select>
               <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
 

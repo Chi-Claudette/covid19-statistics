@@ -12,6 +12,7 @@ import {CategoryService} from "../shared/category.service";
 export class CreateProductComponent implements OnInit {
   createP= new FormGroup({});
   cats: any[] = [];
+  prod:any= {};
 
   constructor(private  ps: ProductService, private  cs: CategoryService) { }
 
@@ -28,22 +29,27 @@ export class CreateProductComponent implements OnInit {
 
       }
     );
+    this.getCats();
 
-    this.cs.getCat().subscribe(res => {
-      this.cats = res;
-      console.log(res);
-    });
   }
   get f()
   {
     return this.createP.controls;
   }
 
-  onSubmit(id:number,form: Prod)
+  onSubmit(form: Prod)
   {
-      this.ps.postProducts(id, form).subscribe(res => {
+      this.ps.postProducts(this.prod.id, form).subscribe(res => {
         console.log((res));
+        console.log((this.prod.id));
       })
+  }
+  getCats()
+  {
+    this.cs.getCat().subscribe(res => {
+      this.cats = res;
+      console.log(res);
+    });
   }
 
 

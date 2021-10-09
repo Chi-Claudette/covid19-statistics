@@ -40,7 +40,7 @@
 </div>
 <br>
 
-<h2>Product Categories</h2>
+<h2 style="margin-left: 20px">Product Categories</h2>
 
 <br>
 
@@ -58,24 +58,27 @@
 
 </owl-carousel-o>
 
-<h5>Click on a category to display its products!</h5>
-<p >Shop till your satisfaction</p>
+<div style="margin-left: 20px">
+  <h5>Click on a category to display its products!</h5>
+  <p >We have it all installed for you</p>
+</div>
+
 
 <div class="container">
  <div class="row ">
    <hr>
-   <h5>Fashion</h5>
-   <div class="col-md-3 col-sm-6">
+   <h4>Products</h4>
+   <div class="col-md-3 col-sm-6" *ngFor="let prod of prods">
      <div class="card" style="width: 18rem;">
-       <img src="assets/img/org.jfif" class="card-img-top img-thumbnail" alt="...">
+       <img [src]="prod.pi" class="card-img-top img-thumbnail" alt="...">
        <div class="card-img-overlay">
          <span class="off">25%</span>
        </div>
        <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
+         <h5 class="card-title">{{prod.name}}</h5>
+         <p class="card-text">Quantity: {{prod.quant}}</p>
+         <p class="card-text" >Price: <span style="color: crimson">{{prod.uprice}}{{prod.cur}}</span></p>
+         <p class="card-text">{{prod.des}}</p>
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
@@ -83,173 +86,12 @@
          <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
          <div  style="text-align: center">
            <br>
-         <a href="assets/img/org.jfif" class="card-link btn btn-primary">View image</a>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/gwn.png" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">35%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/pro.jfif" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">10%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/com.jfif" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">20%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/brd.jfif" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">25%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/phn.jfif" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">15%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
+         <a [href]="prod.pi" class="card-link btn btn-primary">View image</a>
          </div>
        </div>
      </div>
    </div>
 
-  <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/cake.jfif" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">10%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
-  <div class="col-md-3 col-sm-6">
-     <div class="card" style="width: 18rem;">
-       <img src="assets/img/ct.jpg" class="card-img-top img-thumbnail" alt="...">
-       <div class="card-img-overlay">
-         <span class="off">25%</span>
-       </div>
-       <div class="card-body">
-         <h5 class="card-title">Orange</h5>
-         <p class="card-text">Quantity: 5</p>
-         <p class="card-text" style="color: crimson">200frs</p>
-         <p class="card-text">Delicious oranges, good for the health</p>
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
-         <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
-         <div  style="text-align: center">
-           <br>
-           <a href="assets/img/org.jfif" class="card-link btn btn-primary">Add to cart</a>
-         </div>
-       </div>
-     </div>
-   </div>
  </div>
 </div>
 <br>

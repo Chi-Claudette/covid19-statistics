@@ -1,6 +1,19 @@
 <app-header></app-header>
-<a routerLink="/db"><img src="assets/img/su.png" width="50px" height="50px"></a>
+<a routerLink="/db"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
 <div class="container">
+
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let cat of cats" (click)="disp(cat.id)">
+      <ng-template carouselSlide >
+        <div class="container">
+          <button style="text-align: center" class="btn btn-warning">{{cat.name}}</button>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+
   <h3>Manage your products</h3>
   <div class="row">
   <div class="col-md-3 col-sm-6"  *ngFor="let product of products">
@@ -15,8 +28,8 @@
 
         <div  style="text-align: center">
           <br>
-          <button class="btn btn-primary"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
-          <button class="btn btn-danger"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
+          <button class="btn btn-primary" (click)="edit(product.id)"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
+          <button class="btn btn-danger" (click)="delete(product.id)"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
         </div>
       </div>
     </div>

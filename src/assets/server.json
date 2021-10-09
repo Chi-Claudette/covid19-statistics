@@ -91,14 +91,34 @@
       "id": 9
     },
     {
-      "name": "Cheese",
-      "quant": 3,
-      "uprice": "1500",
+      "name": "Computer",
+      "quant": 2,
+      "uprice": "150000",
       "cur": "frs",
-      "cat": "5",
-      "pi": "assets/img/ch.jfif",
-      "des": "delicious cheese",
-      "id": 10
+      "cat": "cat 5",
+      "pi": "assets/img/com.jfif",
+      "des": "powerful computer",
+      "id": 11
+    },
+    {
+      "name": "projector",
+      "quant": 2,
+      "uprice": 70000,
+      "cur": "frs",
+      "cat": "cat 5",
+      "pi": "assets/img/pro.jfif",
+      "des": "powerful lasers",
+      "id": 13
+    },
+    {
+      "name": "Coat",
+      "quant": 7,
+      "uprice": 15000,
+      "cur": "frs",
+      "cat": "cat 6",
+      "pi": "assets/img/ct.jpg",
+      "des": "fancy coat",
+      "id": 14
     }
   ],
   "categories": [
@@ -109,7 +129,7 @@
     },
     {
       "name": "ca2",
-      "im": "assets/img/org.jfif",
+      "im": "assets/img/gwn.png",
       "id": 2
     },
     {
@@ -136,16 +156,6 @@
       "name": "cat 7",
       "im": "assets/img/pro.jfif",
       "id": 7
-    },
-    {
-      "name": "cat 8",
-      "im": "assets/img/bg6.jpg",
-      "id": 8
-    },
-    {
-      "name": "cat 9",
-      "im": "assets/img/bg4.jpg",
-      "id": 9
     }
   ],
   "profile": {

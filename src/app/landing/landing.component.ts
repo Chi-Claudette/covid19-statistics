@@ -35,6 +35,7 @@ export class LandingComponent implements OnInit {
     nav: true
   }
   cats: any[]= [];
+  prods: any[]= [];
 
   constructor(private ps: ProductService, private cs: CategoryService) {
   }
@@ -43,6 +44,11 @@ export class LandingComponent implements OnInit {
     this.cs.getCat().subscribe(res =>
     {
       this.cats= res;
+    });
+
+    this.ps.getProducts().subscribe(res =>
+    {
+      this.prods= res;
     })
 
   }

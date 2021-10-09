@@ -13,9 +13,25 @@ export class ProductService {
   getProducts() {
     return this.http.get<any>(this.url);
   }
-
-  postProducts(catid: number, postData: Prod) {
-    return this.http.post<any>(this.url, postData);
+  getAProducts(proid:number) {
+    return this.http.get<any>(this.url+'/'+proid);
   }
+  getProductByCat(catid: number)
+  {
+    return this.http.get<any>(this.url+'/categories/'+catid);
+  }
+
+  postProducts(catid: number, prod: Prod) {
+    return this.http.post<any>(this.url, prod);
+  }
+  editproduct(proid:number, prod: Prod )
+  {
+    return this.http.put<any>(this.url+'/'+proid, prod);
+  }
+  deleteProduct(proid: number)
+  {
+    return this.http.delete(this.url+'/'+proid);
+  }
+
 
 }
