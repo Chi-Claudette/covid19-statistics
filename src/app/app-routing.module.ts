@@ -7,7 +7,6 @@ import {ManageCategoryComponent} from "./manage-category/manage-category.compone
 import {CreateProductComponent} from "./create-product/create-product.component";
 import {ManageProductComponent} from "./manage-product/manage-product.component";
 import {EditProductComponent} from "./manage-product/edit-product/edit-product.component";
-import {PdetailComponent} from "./manage-product/product-detail/pdetail.component";
 import {EditCatComponent} from "./manage-category/edit-cat/edit-cat.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
@@ -18,7 +17,6 @@ const routes: Routes = [
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'cp', component: CreateProductComponent},
   {path: 'mp', component: ManageProductComponent},
-  {path: 'mp/pd/:id', component: PdetailComponent},
   {path: 'mp/:id', component: EditProductComponent},
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'mc/:id', component: EditCatComponent},

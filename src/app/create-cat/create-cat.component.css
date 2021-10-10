@@ -31,3 +31,11 @@ input.ng-invalid.ng-touched {
   background-color: coral;
   color: white;
 }
+.alert-danger
+{
+  border: 2px solid crimson;
+}
+.alert-success
+{
+  border: 2px solid green;
+}

@@ -1,13 +1,13 @@
 {
   "products": [
     {
-      "name": "orange",
-      "quant": 8,
-      "uprice": "200",
+      "name": "Orange",
+      "quant": 9,
+      "uprice": 100,
       "cur": "frs",
-      "cat": "1",
+      "cat": "cat 2",
       "pi": "assets/img/org.jfif",
-      "des": "juicy fruit",
+      "des": null,
       "id": 1
     },
     {
@@ -119,27 +119,47 @@
       "pi": "assets/img/ct.jpg",
       "des": "fancy coat",
       "id": 14
+    },
+    {
+      "name": "Jewelry",
+      "quant": 3,
+      "uprice": 10000,
+      "cur": "frs",
+      "cat": "cat 7",
+      "pi": "assets/img/jwr.jpg",
+      "des": "diamond jewelry",
+      "id": 16
+    },
+    {
+      "name": "cheese",
+      "quant": 4,
+      "uprice": 1000,
+      "cur": "frs",
+      "cat": "cat 3",
+      "pi": "assets/img/ch.jfif",
+      "des": "delicious cheese",
+      "id": 17
     }
   ],
   "categories": [
     {
-      "name": "category1",
+      "name": "cat 1",
       "im": "assets/img/jwr.jpg",
       "id": 1
     },
     {
-      "name": "ca2",
-      "im": "assets/img/gwn.png",
+      "name": "cat 2",
+      "im": "assets/img/gn.jfif",
       "id": 2
     },
     {
-      "name": "cat 3",
-      "im": "assets/img/brd.jfif",
+      "name": "categ 3",
+      "im": "assets/img/car.jfif",
       "id": 3
     },
     {
       "name": "cat 4",
-      "im": "assets/img/org.jfif",
+      "im": "assets/img/cake.jfif",
       "id": 4
     },
     {
@@ -149,13 +169,18 @@
     },
     {
       "name": "cat 6",
-      "im": "assets/img/com.jfif",
+      "im": "assets/img/ci.jpg",
       "id": 6
     },
     {
       "name": "cat 7",
-      "im": "assets/img/pro.jfif",
+      "im": "assets/img/brd.jfif",
       "id": 7
+    },
+    {
+      "name": "cat 8",
+      "im": "assets/img/com.jfif",
+      "id": 8
     }
   ],
   "profile": {

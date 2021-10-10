@@ -13,6 +13,9 @@ export class EditCatComponent implements OnInit {
   editC= new FormGroup({});
   id: number= 0;
   categ: any= {};
+  isloading: any= false;
+  success: any= false;
+  error: any= null;
 
   constructor(private cs: CategoryService, private route: ActivatedRoute) { }
 
@@ -24,12 +27,19 @@ export class EditCatComponent implements OnInit {
         im: new FormControl(null, Validators.required),
       }
     );
+    this.isloading=true;
     this.id= this.route.snapshot.params.id;
     this.cs.getACat(this.id).subscribe(res =>
     {
       this.categ= res;
       console.log(this.categ.name);
-    })
+      this.isloading= false;
+    },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+        this.isloading= false;
+      })
   }
   get f()
   {
@@ -37,10 +47,19 @@ export class EditCatComponent implements OnInit {
   }
   onSubmit(id:number, form:Cat)
   {
+    this.isloading= true;
     this.cs.editCat(id, form).subscribe(res =>
     {
       console.log(res);
-    })
+      this.isloading= false;
+      this.success= true;
+    },
+      errorMessage =>
+      {
+        this.error= errorMessage;
+        this.isloading= false;
+      })
+
   }
 
 }

@@ -14,6 +14,9 @@ export class EditProductComponent implements OnInit {
   proid:number= 0;
   product:any={};
   cats:any[]= [];
+  isloading:any= false;
+  success:any= false;
+  error:any= null;
   constructor(private ps: ProductService, private cs: CategoryService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -29,11 +32,19 @@ export class EditProductComponent implements OnInit {
 
       }
     );
+    this.isloading= true;
     this.proid= this.route.snapshot.params.id;
     this.ps.getAProducts(this.proid).subscribe(res =>
     {
       this.product= res;
-    });
+      this.isloading=false;
+    },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+        this.isloading=false;
+      });
+
     this.getCats();
   }
   get f()
@@ -43,17 +54,29 @@ export class EditProductComponent implements OnInit {
 
   onSubmit(id: number, form:any)
   {
+    this.isloading= true;
     this.ps.editproduct(id,form).subscribe(res=>
     {
       console.log(res);
-    })
+      this.success= true;
+      this.isloading= false;
+    },
+      errorMessage =>
+      {
+        this.error= errorMessage;
+      }
+    )
   }
   getCats()
   {
     this.cs.getCat().subscribe(res =>
     {
       this.cats= res;
-    })
+    },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+      })
   }
 
 

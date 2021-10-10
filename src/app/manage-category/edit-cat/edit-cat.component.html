@@ -3,6 +3,17 @@
 <br>
 <br>
 <div class="container">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{error.statusText}}</p>
+  </div>
+
+  <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Category successfully updated!</h4>
+  </div>
   <div class="card">
     <div class="card-header">
       <h4 style="color:coral; text-align: center "> Edit Category</h4>

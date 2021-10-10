@@ -10,6 +10,9 @@ import {CategoryService} from "../shared/category.service";
 export class CreateCatComponent implements OnInit {
   cats: any[]= [];
   createC= new FormGroup({});
+  error:any= null;
+  success:any= false;
+  isloading:any= false;
 
   constructor(private cs: CategoryService) { }
 
@@ -29,10 +32,20 @@ export class CreateCatComponent implements OnInit {
   }
   onSubmit(form:any)
   {
+    this.isloading=true;
     this.cs.createCat(form).subscribe(res =>
     {
       console.log(res);
-    })
+      this.success=true;
+      this.isloading=false;
+    },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+        this.error= errorMessage;
+        this.isloading=false;
+      });
+
   }
 
 }

@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProductService} from "../shared/product.service";
 import {Prod} from "../shared/prod";
 import {CategoryService} from "../shared/category.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-product',
@@ -13,6 +14,9 @@ export class CreateProductComponent implements OnInit {
   createP= new FormGroup({});
   cats: any[] = [];
   prod:any= {};
+  error:any= null;
+  success:any= false;
+  isloading:any= false;
 
   constructor(private  ps: ProductService, private  cs: CategoryService) { }
 
@@ -39,17 +43,32 @@ export class CreateProductComponent implements OnInit {
 
   onSubmit(form: Prod)
   {
+    this.isloading=true
       this.ps.postProducts(this.prod.id, form).subscribe(res => {
         console.log((res));
         console.log((this.prod.id));
-      })
+        this.success=true;
+        this.isloading=false;
+      },
+        errorMessage =>
+        {
+          console.log(errorMessage);
+          this.error= errorMessage;
+          this.isloading=false;
+        }
+        );
   }
   getCats()
   {
     this.cs.getCat().subscribe(res => {
       this.cats = res;
       console.log(res);
-    });
+    },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+      }
+      );
   }
 
 

@@ -1,13 +1,20 @@
 <app-header></app-header>
 <a routerLink="/db"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
 <div class="container">
+  <div style="text-align: center;" *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="errors" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{errors.statusText}}</p>
+  </div>
 
   <owl-carousel-o [options]="customOptions">
 
-    <ng-container *ngFor="let cat of cats" (click)="disp(cat.id)">
+    <ng-container *ngFor="let cat of cats" (click)=" displayprod(cat.id)">
       <ng-template carouselSlide >
         <div class="container">
-          <button style="text-align: center" class="btn btn-warning">{{cat.name}}</button>
+          <button style="text-align: center" class="btn btn-warning btn-lg" style="border-radius: 20px; background-color: lightcoral; color: white; width: 150px">{{cat.name}}</button>
         </div>
       </ng-template>
     </ng-container>
@@ -15,6 +22,9 @@
   </owl-carousel-o>
 
   <h3>Manage your products</h3>
+  <div *ngIf="cats.length< 1" style="text-align: center; color: crimson">
+    <h4>No product categories available!...</h4>
+  </div>
   <div class="row">
   <div class="col-md-3 col-sm-6"  *ngFor="let product of products">
     <div class="card" style="width: 18rem;">

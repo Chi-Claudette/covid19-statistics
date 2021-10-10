@@ -21,10 +21,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import { FormsModule} from "@angular/forms";
 import { LandingHeaderComponent } from './landing-header/landing-header.component';
-import { PdetailComponent } from './manage-product/product-detail/pdetail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { ProductsLandingComponent } from './landing/products-landing/products-landing.component';
 
 @NgModule({
   declarations: [
@@ -42,8 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     LandingHeaderComponent,
-    PdetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoadingSpinnerComponent,
+    ProductsLandingComponent
   ],
     imports: [
       HttpClientModule,

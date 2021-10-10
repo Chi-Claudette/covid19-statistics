@@ -1,8 +1,17 @@
 <app-header xmlns="http://www.w3.org/1999/html"></app-header>
 <a routerLink="/db"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
 <div class="container">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Category successfully deleted!</h4>
+  </div>
   <h3>Manage your categories</h3>
-  <div class="row">
+  <div *ngIf="cats.length < 1 && !isloading" style="text-align: center; color: crimson">
+    <h4>No category available!...</h4>
+  </div>
+  <div class="row" *ngIf="cats.length >= 1">
   <div class="col-md-3 col-sm-6" *ngFor="let cat of cats">
   <div class="card" style="width: 18rem;">
     <img [src]="cat.im" class="card-img-top img-thumbnail im" alt="...">

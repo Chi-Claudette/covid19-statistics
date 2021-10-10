@@ -1,6 +1,21 @@
 <app-header></app-header>
 <a routerLink="/db"><img src="assets/img/arrow.png" width="30px" height="30px"></a>
 <div class="container offset-md-1">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{error.statusText}}</p>
+  </div>
+  <div class="alert alert-danger" *ngIf="cats.length < 1 && !isloading" style="text-align: center">
+    <h4>No categories yet!</h4>
+    <p>Create a category first before creating a product.</p>
+    <button class="btn btn-success" routerLink="/cc">Create category</button>
+  </div>
+  <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Product successfully created!</h4>
+  </div>
   <div class="row">
     <div class="col-md-5 im" [ngStyle]="{backgroundImage:'url(assets/img/pro.jpg)'}">
       <div style="text-align: center; margin-top: 30px">
@@ -42,10 +57,12 @@
           <div class="col-md-6">
             <div class="form-group">
               <span>Select a category</span>
-              <select class="form-control form-select" formControlName="cat" [(ngModel)]="prod">
-                <option *ngFor="let cat of cats" value="{{cat.name}}">{{cat.name}}</option>
+              <select [hidden]="cats.length< 1 && !isloading" class="form-control form-select" formControlName="cat"  >
+                <option  *ngFor="let cat of cats" value="{{cat.name}}" >{{cat.name}}</option>
               </select>
               <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
+              <br>
+              <span *ngIf="cats.length < 1" class="form-text"> No categories yet</span>
 
             </div>
           </div>

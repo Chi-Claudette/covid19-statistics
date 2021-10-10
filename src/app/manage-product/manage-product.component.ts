@@ -12,6 +12,8 @@ import {OwlOptions} from "ngx-owl-carousel-o";
 export class ManageProductComponent implements OnInit {
   products: any[]= [];
   cats:any[]= [];
+  isLoading:boolean = false;
+  errors:any= null;
   customOptions:OwlOptions = {
     loop: false,
     mouseDrag: true,
@@ -40,15 +42,8 @@ export class ManageProductComponent implements OnInit {
   constructor(private ps: ProductService, private cs: CategoryService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cs.getCat().subscribe(res =>
-    {
-      this.cats= res;
-    });
-
-    this.ps.getProducts().subscribe(res =>
-    {
-      this.products= res;
-    })
+    this.categories();
+    this.productLists();
 
   }
   edit(id: number)
@@ -63,7 +58,36 @@ export class ManageProductComponent implements OnInit {
     })
   }
 
-  disp(catid:number)
+  categories()
+  {
+    this.isLoading= true;
+    this.cs.getCat().subscribe(res =>
+      {
+        this.cats= res;
+        this.isLoading= false;
+      },
+      errorMessage =>
+      {
+        this.errors= errorMessage;
+        this.isLoading= false;
+      });
+  }
+  productLists()
+  {
+    this.isLoading= true;
+    this.ps.getProducts().subscribe(res =>
+      {
+        this.products= res;
+        this.isLoading= false;
+      },
+      errorMessage =>
+      {
+        console.log(errorMessage);
+        this.isLoading= false;
+      }
+    );
+  }
+  displayprod(catid:number)
   {
 
   }

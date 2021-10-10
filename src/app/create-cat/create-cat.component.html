@@ -1,6 +1,16 @@
 <app-header></app-header>
 <a routerLink="/db"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
 <div class="container offset-md-1" style="margin-top: 50px">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{error.statusText}}</p>
+  </div>
+    <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Category successfully created!</h4>
+    </div>
   <div class="row">
     <div class="col-md-6 img-fluid im" [ngStyle]="{backgroundImage:'url(assets/img/ci.jpg) '}">
       <div style="text-align: center; " class="jumbotron  rounded-4">
