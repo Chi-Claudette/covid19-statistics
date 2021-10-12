@@ -1,0 +1,29 @@
+button
+{
+  box-shadow: 1px 1px 2px black;
+}
+.im{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row .im
+{
+  box-shadow: 1px 2px 3px 1px gray;
+}
+.row  .form
+{
+  box-shadow: 1px 2px 3px 1px gray;
+}
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+select.ng-invalid.ng-touched
+{
+  border: 2px solid red;
+}
+.color{
+  background-color: coral;
+  color: white;
+}

@@ -1,1 +1,50 @@
-<p>manage-product works!</p>
+<app-header></app-header>
+<a routerLink="/db"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
+<div class="container">
+  <div style="text-align: center;" *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="errors" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{errors.statusText}}</p>
+  </div>
+
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let cat of cats" (click)=" displayprod(cat.id)">
+      <ng-template carouselSlide >
+        <div class="container">
+          <button style="text-align: center" class="btn btn-warning btn-lg" style="border-radius: 20px; background-color: lightcoral; color: white; width: 150px">{{cat.name}}</button>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+
+  <h3>Manage your products</h3>
+  <div *ngIf="cats.length< 1" style="text-align: center; color: crimson">
+    <h4>No product categories available!...</h4>
+  </div>
+  <div class="row">
+  <div class="col-md-3 col-sm-6"  *ngFor="let product of products">
+    <div class="card" style="width: 18rem;">
+      <img [src]="product.pi" class="card-img-top img-thumbnail im" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">Quantity: {{product.quant}}</p>
+        <p class="card-text" >Unit price: <span style="color: crimson">{{product.uprice}}{{product.cur}}</span></p>
+        <p class="card-text">Category: {{product.cat}}</p>
+        <p class="card-text">{{product.des}}</p>
+
+        <div  style="text-align: center">
+          <br>
+          <button class="btn btn-primary" (click)="edit(product.id)"><img src="assets/img/ediit.png" width="20px" height="20px"> Edit</button>&nbsp; &nbsp; &nbsp;
+          <button class="btn btn-danger" (click)="delete(product.id)"><img src="assets/img/del.png" width="20px" height="20px"> Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+</div>
+

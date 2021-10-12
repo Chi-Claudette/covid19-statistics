@@ -1,0 +1,33 @@
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light " style="background-color: coral; color: white">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" style="color: #6AFB92;">Product Catalog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <form class="d-flex">
+        <input class="form-control " type="text" placeholder="Search product..." aria-label="Search"  style="border-radius: 0px; width: 350px">
+        <button class="btn btn-dark" type="submit" (click)="onSubmit()" style="border-radius: 0px">Search</button>
+      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link " style="color: white">SignUp <img src="assets/img/su.png" width="30px" height="30px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" style="color: white">SignIn <img src="assets/img/si.png" width="30px" height="30px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:gray; font-weight: bolder">About <img src="assets/img/ab.png" width="30px" height="30px"></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<hr style="margin-top: 70px; border: 1px dotted coral">
+
+

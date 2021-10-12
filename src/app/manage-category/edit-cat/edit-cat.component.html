@@ -1,1 +1,62 @@
-<p>edit-cat works!</p>
+<app-header></app-header>
+<a routerLink="/mc"><img src="assets/img/arrow.png" width="40px" height="40px"></a>
+<br>
+<br>
+<div class="container">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{error.statusText}}</p>
+  </div>
+
+  <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Category successfully updated!</h4>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 style="color:coral; text-align: center "> Edit Category</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{categ.im}}" width="500px" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <div class="container">
+
+            <form  [formGroup]="editC" (submit)="onSubmit(categ.id, editC.value)">
+              <br>
+              <div class="form-group">
+                <label>Category name</label>
+                <input type="text" id="name" class="form-control" formControlName="name" value="{{categ.name}}">
+                <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Image</label>
+                <input type="file" id="im" class="form-control" formControlName="im">
+                <span *ngIf="editC.controls.invalid" class="form-text"> This field is required</span>
+              </div>
+              <br>
+              <br>
+              <div>
+                <button type="submit" [disabled]="editC.invalid" class="btn btn-primary btn-lg color">Edit category</button>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger btn-lg" style="background-color: crimson" routerLink="/mc">Cancel</button>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

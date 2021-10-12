@@ -1,0 +1,189 @@
+{
+  "products": [
+    {
+      "name": "Orange",
+      "quant": 9,
+      "uprice": 100,
+      "cur": "frs",
+      "cat": "cat 2",
+      "pi": "assets/img/org.jfif",
+      "des": null,
+      "id": 1
+    },
+    {
+      "name": "cake",
+      "quant": 3,
+      "uprice": "5000",
+      "cur": "frs",
+      "cat": "1",
+      "pi": "assets/img/cake.jfif",
+      "des": "delicious cake",
+      "id": 2
+    },
+    {
+      "name": "Tomato",
+      "quant": 7,
+      "uprice": "100",
+      "cur": "frs",
+      "cat": "2",
+      "pi": "assets/img/tomat.jfif",
+      "des": "healthy and ripped tomatoes",
+      "id": 3
+    },
+    {
+      "name": "Carrots",
+      "quant": 3,
+      "uprice": "200",
+      "cur": "frs",
+      "cat": "2",
+      "pi": "assets/img/car.jfif",
+      "des": "healthy carrots from the best ",
+      "id": 4
+    },
+    {
+      "name": "Party gown",
+      "quant": 6,
+      "uprice": "7000",
+      "cur": "frs",
+      "cat": "3",
+      "pi": "assets/img/gn.jfif",
+      "des": "nice party wear",
+      "id": 5
+    },
+    {
+      "name": "designer dress",
+      "quant": 2,
+      "uprice": "10000",
+      "cur": "frs",
+      "cat": "3",
+      "pi": "assets/img/ct1.jfif",
+      "des": "nice and comfort",
+      "id": 6
+    },
+    {
+      "name": "Smart phone",
+      "quant": 15,
+      "uprice": "80000",
+      "cur": "frs",
+      "cat": "4",
+      "pi": "assets/img/ph.jfif",
+      "des": "smart phone from the best ",
+      "id": 7
+    },
+    {
+      "name": "Speaker",
+      "quant": 4,
+      "uprice": "6000",
+      "cur": "frs",
+      "cat": "4",
+      "pi": "assets/img/spk.jfif",
+      "des": "powerful speaker",
+      "id": 8
+    },
+    {
+      "name": "Pineapple",
+      "quant": 6,
+      "uprice": "500",
+      "cur": "frs",
+      "cat": "5",
+      "pi": "assets/img/pine.jfif",
+      "des": "succulent fruit",
+      "id": 9
+    },
+    {
+      "name": "Computer",
+      "quant": 2,
+      "uprice": "150000",
+      "cur": "frs",
+      "cat": "cat 5",
+      "pi": "assets/img/com.jfif",
+      "des": "powerful computer",
+      "id": 11
+    },
+    {
+      "name": "projector",
+      "quant": 2,
+      "uprice": 70000,
+      "cur": "frs",
+      "cat": "cat 5",
+      "pi": "assets/img/pro.jfif",
+      "des": "powerful lasers",
+      "id": 13
+    },
+    {
+      "name": "Coat",
+      "quant": 7,
+      "uprice": 15000,
+      "cur": "frs",
+      "cat": "cat 6",
+      "pi": "assets/img/ct.jpg",
+      "des": "fancy coat",
+      "id": 14
+    },
+    {
+      "name": "Jewelry",
+      "quant": 3,
+      "uprice": 10000,
+      "cur": "frs",
+      "cat": "cat 7",
+      "pi": "assets/img/jwr.jpg",
+      "des": "diamond jewelry",
+      "id": 16
+    },
+    {
+      "name": "cheese",
+      "quant": 4,
+      "uprice": 1000,
+      "cur": "frs",
+      "cat": "cat 3",
+      "pi": "assets/img/ch.jfif",
+      "des": "delicious cheese",
+      "id": 17
+    }
+  ],
+  "categories": [
+    {
+      "name": "cat 1",
+      "im": "assets/img/jwr.jpg",
+      "id": 1
+    },
+    {
+      "name": "cat 2",
+      "im": "assets/img/gn.jfif",
+      "id": 2
+    },
+    {
+      "name": "categ 3",
+      "im": "assets/img/car.jfif",
+      "id": 3
+    },
+    {
+      "name": "cat 4",
+      "im": "assets/img/cake.jfif",
+      "id": 4
+    },
+    {
+      "name": "cat 5",
+      "im": "assets/img/ct.jpg",
+      "id": 5
+    },
+    {
+      "name": "cat 6",
+      "im": "assets/img/ci.jpg",
+      "id": 6
+    },
+    {
+      "name": "cat 7",
+      "im": "assets/img/brd.jfif",
+      "id": 7
+    },
+    {
+      "name": "cat 8",
+      "im": "assets/img/com.jfif",
+      "id": 8
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

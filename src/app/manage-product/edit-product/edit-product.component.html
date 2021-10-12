@@ -1,1 +1,91 @@
-<p>edit-product works!</p>
+<app-header></app-header>
+<a routerLink="/mp"><img src="assets/img/arrow.png" width="30px" height="30px"></a>
+<div class="container">
+  <div style="text-align: center;" *ngIf="isloading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+    <h4>An error occured</h4>
+    <p>{{error.statusText}}</p>
+  </div>
+
+  <div class="alert alert-success" *ngIf="success" style="text-align: center">
+    <h4>Product successfully updated!</h4>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 style="color:coral; text-align: center "> Edit Product</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <img [src]="product.pi" width="500px" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <div class="container">
+
+              <form  [formGroup]="editP" (submit)="onSubmit(product.id, editP.value)">
+                <div class="form-group">
+                  <label>Product name</label>
+                  <input type="text" id="name" class="form-control" formControlName="name" value="{{product.name}}">
+                  <span *ngIf="f.name.invalid && f.name.touched" class="form-text"> Name is required</span>
+                </div>
+                <div class="form-group">
+                  <label>Quantity</label>
+                  <input type="number" id="quant" class="form-control" formControlName="quant" value="{{product.quant}}" >
+                  <span *ngIf="f.quant.invalid && f.quant.touched" class="form-text"> This field is required</span>
+                </div>
+
+                <div class="form-group">
+                  <label>Unit price</label>
+                  <input type="number" id="uprice" class="form-control" formControlName="uprice" value="{{product.uprice}}">
+                  <span *ngIf="f.uprice.invalid && f.uprice.touched" class="form-text"> This field is required</span>
+                </div>
+                <div class="form-group">
+                  <label>Currency</label>
+                  <input type="text" id="cur" class="form-control" formControlName="cur" value="{{product.cur}}">
+                  <span *ngIf="f.cur.invalid && f.cur.touched" class="form-text"> This field is required</span>
+                </div>
+                <div class="form-group">
+                  <label>Product description</label>
+                  <input type="text" id="des" class="form-control" formControlName="des" value="{{product.des}}">
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <span>Select a category</span>
+                      <select class="form-control form-select" formControlName="cat">
+                        <option *ngFor="let cat of cats" value="{{cat.name}}">{{cat.name}}</option>
+                      </select>
+                      <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Product image</label>
+                      <input type="file" id="pi" class="form-control" formControlName="pi">
+                      <span *ngIf="f.pi.invalid && f.pi.touched" class="form-text"> This field is required</span>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+                <div>
+                  <button type="submit" [disabled]="editP.invalid" class="btn btn-info btn-lg color" style="color: white">Edit product</button>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                  <button type="button" class="btn btn-danger btn-lg" routerLink="/mp">Cancel</button>
+
+                </div>
+
+              </form>
+          </div>
+        </div>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
