@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CategoryService} from "../../shared/category.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Cat} from "../../shared/cat";
 
 @Component({
@@ -17,7 +17,7 @@ export class EditCatComponent implements OnInit {
   success: any= false;
   error: any= null;
 
-  constructor(private cs: CategoryService, private route: ActivatedRoute) { }
+  constructor(private cs: CategoryService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.categ.name);
@@ -53,6 +53,7 @@ export class EditCatComponent implements OnInit {
       console.log(res);
       this.isloading= false;
       this.success= true;
+      setInterval(() => this.router.navigate(['/mc']), 3000);
     },
       errorMessage =>
       {
