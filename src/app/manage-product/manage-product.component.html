@@ -4,7 +4,7 @@
   <div style="text-align: center;" *ngIf="isLoading">
     <app-loading-spinner></app-loading-spinner>
   </div>
-  <div class="alert alert-danger" *ngIf="errors" style="text-align: center">
+  <div class="alert alert-danger" *ngIf="errors" style="text-align: center; border: 2px solid crimson;">
     <h4>An error occured</h4>
     <p>{{errors.statusText}}</p>
   </div>

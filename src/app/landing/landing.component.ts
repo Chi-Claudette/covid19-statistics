@@ -44,11 +44,13 @@ export class LandingComponent implements OnInit {
     this.cs.getCat().subscribe(res =>
     {
       this.cats= res;
+      console.log(this.cats);
     });
 
     this.ps.getProducts().subscribe(res =>
     {
       this.prods= res;
+      console.log(this.prods);
     })
 
   }

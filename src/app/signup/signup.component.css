@@ -1,0 +1,60 @@
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+section{
+  background-color: transparent;
+}
+.register{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 30px;
+}
+/* .wrapper{
+position: relative;
+display: flex;
+height: 4rem;
+}
+.label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(2.5rem, -50%);
+  transform-origin: 0% 0%;
+  color: #888888;
+  padding: 0.25rem 0;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+.material-icons{
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.675rem;
+  color: #888888;
+  transition: all 0.35s;
+}
+input{
+  height: inherit;
+  width: 16rem;
+  border: 2px solid #888888;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: #f7f7f7;
+  font-size: 1rem;
+  text-indent: 1rem;
+  transition: all 0.35s;
+}
+input :focus{ border-color: #8f44fd;}
+input :focus ~ .icon{ color: #fff;}
+input :focus ~ .label {
+  background: #16141b;
+  color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2.875rem);
+} */

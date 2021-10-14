@@ -132,10 +132,10 @@
     },
     {
       "name": "cheese",
-      "quant": 4,
+      "quant": 5,
       "uprice": 1000,
       "cur": "frs",
-      "cat": "cat 3",
+      "cat": "cat 7",
       "pi": "assets/img/ch.jfif",
       "des": "delicious cheese",
       "id": 17
@@ -153,12 +153,12 @@
       "id": 2
     },
     {
-      "name": "categ 3",
+      "name": "carrots",
       "im": "assets/img/car.jfif",
       "id": 3
     },
     {
-      "name": "cat 4",
+      "name": "cake",
       "im": "assets/img/cake.jfif",
       "id": 4
     },
@@ -168,8 +168,8 @@
       "id": 5
     },
     {
-      "name": "cat 6",
-      "im": "assets/img/ci.jpg",
+      "name": "category 6",
+      "im": "C:\\fakepath\\gwn.png",
       "id": 6
     },
     {

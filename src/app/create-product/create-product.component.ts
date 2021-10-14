@@ -24,12 +24,12 @@ export class CreateProductComponent implements OnInit {
     this.createP= new FormGroup(
       {
         name: new FormControl(null, Validators.required),
-        quant: new FormControl(null, Validators.required),
-        uprice: new FormControl(null, Validators.required),
-        cur: new FormControl(null, Validators.required),
-        cat: new FormControl(null, Validators.required),
-        pi: new FormControl(null, Validators.required),
-        des: new FormControl(null),
+        quantity: new FormControl(null, Validators.required),
+        unitPrice: new FormControl(null, Validators.required),
+        currency: new FormControl(null, Validators.required),
+        description: new FormControl(null),
+        prodPhtoto: new FormControl(null, Validators.required),
+        category: new FormControl(null, Validators.required),
 
       }
     );

@@ -7,11 +7,11 @@ import {Prod} from "./prod";
 })
 export class ProductService {
   eventEmitter= new EventEmitter<string>();
-   private url: string = "http://localhost:3000/products"
+   private url: string = "http://localhost:8080/api/products"
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get<any>(this.url);
+    return this.http.get<any>("http://localhost:8080/api/products");
   }
   getAProducts(proid:number) {
     return this.http.get<any>(this.url+'/'+proid);

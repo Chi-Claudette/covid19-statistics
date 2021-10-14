@@ -4,7 +4,7 @@
   <div style="text-align: center;" *ngIf="isloading">
     <app-loading-spinner></app-loading-spinner>
   </div>
-  <div class="alert alert-danger" *ngIf="error" style="text-align: center">
+  <div class="alert alert-danger" *ngIf="error" style="text-align: center; border: 2px solid crimson;">
     <h4>An error occured</h4>
     <p>{{error.statusText}}</p>
   </div>
@@ -35,32 +35,32 @@
         </div>
         <div class="form-group">
           <label>Quantity</label>
-          <input type="number" id="quant" class="form-control" formControlName="quant">
-          <span *ngIf="f.quant.invalid && f.quant.touched" class="form-text"> This field is required</span>
+          <input type="number" id="quant" class="form-control" formControlName="quantity">
+          <span *ngIf="f.quantity.invalid && f.quantity.touched" class="form-text"> This field is required</span>
         </div>
 
         <div class="form-group">
           <label>Unit price</label>
-          <input type="number" id="uprice" class="form-control" formControlName="uprice">
-          <span *ngIf="f.uprice.invalid && f.uprice.touched" class="form-text"> This field is required</span>
+          <input type="number" id="uprice" class="form-control" formControlName="unitPrice">
+          <span *ngIf="f.unitPrice.invalid && f.unitPrice.touched" class="form-text"> This field is required</span>
         </div>
         <div class="form-group">
           <label>Currency</label>
-          <input type="text" id="cur" class="form-control" formControlName="cur">
-          <span *ngIf="f.cur.invalid && f.cur.touched" class="form-text"> This field is required</span>
+          <input type="text" id="cur" class="form-control" formControlName="currency">
+          <span *ngIf="f.currency.invalid && f.currency.touched" class="form-text"> This field is required</span>
         </div>
         <div class="form-group">
           <label>Product description</label>
-          <input type="text" id="des" class="form-control" formControlName="des">
+          <input type="text" id="des" class="form-control" formControlName="description">
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <span>Select a category</span>
-              <select [hidden]="cats.length< 1 && !isloading" class="form-control form-select" formControlName="cat"  >
-                <option  *ngFor="let cat of cats" value="{{cat.name}}" >{{cat.name}}</option>
+              <select [hidden]="cats.length< 1 && !isloading" class="form-control form-select" formControlName="category" >
+                <option  *ngFor="let cat of cats" value="{{cat}}" >{{cat.name}}</option>
               </select>
-              <span *ngIf="f.cat.invalid && f.cat.touched" class="form-text"> This field is required</span>
+              <span *ngIf="f.category.invalid && f.category.touched" class="form-text"> This field is required</span>
               <br>
               <span *ngIf="cats.length < 1" class="form-text"> No categories yet</span>
 
@@ -69,8 +69,8 @@
           <div class="col-md-6">
             <div class="form-group">
               <label>Product image</label>
-              <input type="file" id="pi" class="form-control" formControlName="pi">
-              <span *ngIf="f.pi.invalid && f.pi.touched" class="form-text"> This field is required</span>
+              <input type="file" id="pi" class="form-control" formControlName=" prodPhtoto">
+              <span *ngIf="f. prodPhtoto.invalid && f. prodPhtoto.touched" class="form-text"> This field is required</span>
             </div>
           </div>
         </div>

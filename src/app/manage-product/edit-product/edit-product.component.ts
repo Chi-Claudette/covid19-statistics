@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProductService} from "../../shared/product.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {CategoryService} from "../../shared/category.service";
 
 @Component({
@@ -17,7 +17,7 @@ export class EditProductComponent implements OnInit {
   isloading:any= false;
   success:any= false;
   error:any= null;
-  constructor(private ps: ProductService, private cs: CategoryService, private route: ActivatedRoute) { }
+  constructor(private ps: ProductService, private cs: CategoryService, private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     this.editP= new FormGroup(
@@ -60,6 +60,8 @@ export class EditProductComponent implements OnInit {
       console.log(res);
       this.success= true;
       this.isloading= false;
+      setInterval(() => this.router.navigate(['/mc']), 3000);
+
     },
       errorMessage =>
       {

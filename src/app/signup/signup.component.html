@@ -1,1 +1,73 @@
-<p>signup works!</p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+
+<section class="vh-50">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img
+                src="assets/chairnow.jpg"
+                alt="Sample photo"
+                class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
+              />
+            </div>
+            <div class="col-xl-6">
+              <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)">
+                <div class="card-body p-md-5 text-black">
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <mat-icon>account_circle</mat-icon>
+                    <h3 class="mb-0 text-uppercase register">Registration form</h3>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-label" for="names">Enter names</label>
+                    <input type="text" id="names" class="form-control form-control-lg" formControlName="name"
+                           [ngClass]="{'is-invalid': submitted && f.name.errors}"/>
+                    <span *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <span *ngIf="f.name.errors.required">Full Names are Required</span>
+                    </span>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" class="form-control form-control-lg" formControlName="username"
+                           [ngClass]="{'is-invalid': submitted && f.username.errors}"/>
+                    <span *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                      <span *ngIf="f.username.errors.required">Username is Required</span>
+                    </span>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <label class="form-label" for="password">Enter Password</label>
+                    <input type="password" id="password" class="form-control form-control-lg" formControlName="password"
+                           [ngClass]="{'is-invalid': submitted && f.password.errors}"/>
+                    <span *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <span *ngIf="f.password.errors.required">Password is Required</span>
+                      <span *ngIf="f.password.errors.minlength">Password must be atleast 8 characters</span>
+                    </span>
+                  </div>
+
+                  <div class="d-flex justify-content-center pt-3 mb-4">
+                    <button class="btn btn-light btn-lg" style="margin-right: 10px" (click)="onReset()">Reset all</button>
+                    <input type="submit" value="Submit form" class="btn btn-warning btn-lg ms-2" style="background-color: coral;" [disabled]="!signUpForm.valid">
+                  </div>
+                  <div style="text-align: center">
+                    <p>Already Have an account? <a style="display: inline-block;" routerLink="/login">Log In Here</a></p>
+                    <p>Don't want an account? <a href="#">Go back to Landing Page</a></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
