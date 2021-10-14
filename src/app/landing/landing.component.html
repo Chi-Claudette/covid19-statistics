@@ -49,9 +49,10 @@
   <ng-container *ngFor="let cat of cats">
     <ng-template carouselSlide >
       <div class="container">
-      <img [src]="cat.im"  class="img-thumbnail img-fluid img" >
+      <img src="{{cat.photosImagePath}}"  class="img-thumbnail img-fluid img" >
       <p style="text-align: center">{{cat.name}}</p>
-
+      <p style="text-align: center">{{cat.photosImagePath}}</p>
+      <p style="text-align: center">{{cat.photo}}</p>
       </div>
     </ng-template>
   </ng-container>
@@ -70,15 +71,15 @@
    <h4>Products</h4>
    <div class="col-md-3 col-sm-6" *ngFor="let prod of prods">
      <div class="card" style="width: 18rem;">
-       <img [src]="prod.pi" class="card-img-top img-thumbnail" alt="...">
+       <img [src]="prod. photosImagePath" class="card-img-top img-thumbnail" alt="...">
        <div class="card-img-overlay">
          <span class="off">25%</span>
        </div>
        <div class="card-body">
          <h5 class="card-title">{{prod.name}}</h5>
-         <p class="card-text">Quantity: {{prod.quant}}</p>
-         <p class="card-text" >Price: <span style="color: crimson">{{prod.uprice}}{{prod.cur}}</span></p>
-         <p class="card-text">{{prod.des}}</p>
+         <p class="card-text">Quantity: {{prod.quantity}}</p>
+         <p class="card-text" >Price: <span style="color: crimson">{{prod.unitPrice}}{{prod.currency}}</span></p>
+         <p class="card-text">{{prod.description}}</p>
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
          <img src="assets/img/star.png" class="img-fluid" style="width: 20px; height: 20px">
@@ -86,7 +87,7 @@
          <img src="assets/img/star 1.png" class="img-fluid" style="width: 20px; height: 20px">
          <div  style="text-align: center">
            <br>
-         <a [href]="prod.pi" class="card-link btn btn-primary">View image</a>
+         <a [href]="prod. photosImagePath" class="card-link btn btn-primary">View image</a>
          </div>
        </div>
      </div>

@@ -1,0 +1,17 @@
+section{
+  background-color: transparent;
+}
+.catalogue{
+  font-family: 'Pacifico', cursive;
+  color: coral;
+}
+.login{
+  font-family: 'Bebas Neue', cursive;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+.incorrectData{
+  color: red;
+}
+

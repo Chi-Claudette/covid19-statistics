@@ -9,6 +9,8 @@ import {ManageProductComponent} from "./manage-product/manage-product.component"
 import {EditProductComponent} from "./manage-product/edit-product/edit-product.component";
 import {EditCatComponent} from "./manage-category/edit-cat/edit-cat.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {LoginComponent} from "./login/login.component";
+import {SignupComponent} from "./signup/signup.component";
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'mc', component: ManageCategoryComponent},
   {path: 'mc/:id', component: EditCatComponent},
   {path: 'not-found', component: PageNotFoundComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'signup', component: SignupComponent},
   {path: '**', redirectTo: 'not-found'},
 ];
 

@@ -26,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { ProductsLandingComponent } from './landing/products-landing/products-landing.component';
+import {MaterialModule} from "./material.module";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ProductsLandingComponent } from './landing/products-landing/products-la
         ReactiveFormsModule,
       FormsModule,
       NgbModule,
+      MaterialModule,
       CarouselModule,
       BrowserAnimationsModule
     ],
