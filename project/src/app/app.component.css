@@ -1,0 +1,29 @@
+table th{
+  background-color: mediumpurple;
+  text-align: center;
+  height: 40px;
+  color: white;
+  padding: 20px;
+
+}
+table td
+{
+  text-align: center;
+  padding: 8px;
+}
+.total{
+  box-shadow: 1px 2px 4px  darkgray;
+  height: 90px;
+  color: white;
+  text-align: center;
+  background-color: deepskyblue;
+
+}
+.new{
+  box-shadow: 1px 2px 4px  darkgray;
+  height: 90px;
+  color: white;
+  text-align: center;
+  background-color: slateblue;
+
+}

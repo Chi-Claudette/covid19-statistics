@@ -1,0 +1,63 @@
+<br>
+<div class="container">
+  <h2 style="text-align: center">Global Corona Virus Statistics</h2>
+  <h6>Date: {{data.Global.Date}}</h6>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="new"><p>New confirmed case: {{data.Global.NewConfirmed}}</p>
+      <img src="assets/triangle.png" width="50px" height="40px">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="total"><p>Total confirmed case: {{data.Global.TotalConfirmed}}</p>
+      <img src="assets/x-mark.png" width="50px" height="40px">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div  class="new"><p>New Deaths: {{data.Global.NewDeaths}}</p>
+      <img src="assets/sun.png" width="50px" height="40px">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="total"><p>Total deaths: {{data.Global.TotalDeaths}}</p>
+      <img src="assets/cross.png" width="50px" height="40px">
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <input type="text" placeholder="search a country..." [(ngModel)]="countryName"><button (click)="filt()" class="btn btn-success">Search</button>
+  <br>
+  <p *ngIf="result">Search result of {{countryName}}</p>
+  <br>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Country</th>
+      <th>Country code</th>
+      <th>Slug</th>
+      <th>New confirmed</th>
+      <th>Total confirmed</th>
+      <th>New deaths</th>
+      <th>Total deaths</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let country of countries | filter: countryName">
+      <td>{{country.Country}}</td>
+      <td>{{country.CountryCode}}</td>
+      <td>{{country.Slug}}</td>
+      <td>{{country.NewConfirmed}}</td>
+      <td>{{country.TotalConfirmed}}</td>
+      <td>{{country.NewDeaths}}</td>
+      <td>{{country.TotalDeaths}}</td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
